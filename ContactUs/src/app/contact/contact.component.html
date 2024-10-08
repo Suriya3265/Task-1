@@ -1,0 +1,26 @@
+<h1>Contact us</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" required>
+        <mat-error>Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+        <mat-error>Enter Valid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Message</mat-label>
+        <input type="text" matInput formControlName="message">
+        <mat-error>Message is required</mat-error>
+      </mat-form-field>
+
+      <p style="color: green;">{{success}}</p>
+
+      <button mat-flat-button type="submit">Submit</button>
+</form>
